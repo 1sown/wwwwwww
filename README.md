@@ -1,13 +1,20 @@
-# SnowayAPI
+# Snoway API
 
-SnowayAPI est une bibliothèque JavaScript conçue pour interagir avec l'API Snoway. Elle fournit des méthodes pour récupérer différentes informations à partir de l'API Snoway.
+**Snoway API est une API simple qui vous permet de trouver l'ancien nom d'un utilisateur dans la base de données de Snoway.**
 
 ## Installation
 
-Pour installer SnowayAPI, vous pouvez utiliser npm :
+Pour installer Snoway API, vous pouvez utiliser :
 
 ```bash
-npm install snoway-api
+# NodeJS
+$ npm install snoway-api 
+
+# Yarn
+$ yarn add snoway-api
+
+# Bun
+$ bun snoway-api snoway-api 
 ```
 
 ## Utilisation
@@ -15,10 +22,10 @@ npm install snoway-api
 ```javascript
 const SnowayAPI = require('snoway-api');
 
-// Initialisez SnowayAPI avec votre clé API
+// Initialisez Snoway API avec votre clé API
 const snoway = new SnowayAPI('VOTRE_CLE_API');
 
-// Exemple d'utilisation pour récupérer les noms précédents d'un utilisateur
+// Exemple d'utilisation pour récupérer les prevnames d'un utilisateur
 snoway.getNames('ID_UTILISATEUR').then(data => {
     console.log(data);
 }).catch(error => {
@@ -30,10 +37,10 @@ snoway.getNames('ID_UTILISATEUR').then(data => {
 
 ### `getNames(userID)`
 
-Récupère les noms précédents d'un utilisateur.
+Récupère les prevnames d'un utilisateur.
 
-- `userID` : Identifiant de l'utilisateur pour lequel récupérer les noms précédents.
-- Retourne une promesse qui résout en un objet contenant les noms précédents de l'utilisateur, ou `null` si aucune donnée n'est disponible.
+- `userID` : Identifiant de l'utilisateur pour lequel récupérer les prevnames.
+- Retourne une promesse qui résout en un objet contenant les prevnames de l'utilisateur, ou `null` si aucune donnée n'est disponible.
 
 ### `getDisplay(userID)`
 
@@ -44,19 +51,25 @@ Récupère l'affichage précédent d'un utilisateur.
 
 ### `allPrevnames(userID)`
 
-Récupère tous les noms précédents d'un utilisateur.
+Récupère tous les prevnames d'un utilisateur.
 
-- `userID` : Identifiant de l'utilisateur pour lequel récupérer tous les noms précédents.
-- Retourne une promesse qui résout en un objet contenant tous les noms précédents de l'utilisateur, ou `null` si aucune donnée n'est disponible.
+- `userID` : Identifiant de l'utilisateur pour lequel récupérer tous les prevnames.
+- Retourne une promesse qui résout en un objet contenant tous les prevnames de l'utilisateur, ou `null` si aucune donnée n'est disponible.
 
 ### `ping()`
 
-Effectue une requête ping à l'API pour vérifier la connectivité.
+Effectue une requête ping à l'API.
 
-- Retourne une promesse qui résout en un objet contenant le résultat de la requête ping, ou `null` si aucune donnée n'est disponible.
+- Retourne le ping de l'API.
 
 ### `count()`
 
-Récupère le nombre de noms précédents enregistrés dans l'API.
+Récupère le nombre de prevnames enregistrés dans l'API.
 
-- Retourne une promesse qui résout en un objet contenant le nombre de noms précédents enregistrés, ou `null` si aucune donnée n'est disponible.
+- Retourne une promesse qui résout en un objet contenant le nombre de prevnames enregistrés, ou `null` si aucune donnée n'est disponible.
+
+
+## 💖 Contributors
+
+*  [**1sown**](https://github.com/1sown)
+*  [**22ayman**](https://github.com/9ayman)
